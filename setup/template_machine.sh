@@ -65,7 +65,7 @@ cd libsndfile
 git checkout 5056a77fdae85f96eee4dff82af462db5a5c341e
 ./autogen.sh
 ./configure --enable-werror
-make -j8 && make check
+make -j8
 sudo make install
 
 # ==================================================================
