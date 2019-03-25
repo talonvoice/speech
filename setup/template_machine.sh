@@ -15,7 +15,7 @@ sudo apt-get -y install --no-install-recommends cuda-10-0 libcudnn7=7.4.1.5-1+cu
 rm {cuda,nvidia}*-repo-*.deb
 
 # from wav2letter++ Dockerfile-CUDA https://github.com/facebookresearch/wav2letter/blob/master/Dockerfile-CUDA
-sudo apt-get install -y build-essential ca-certificates cmake wget git vim emacs nano htop g++ openssh-server openssh-client libopenmpi-dev libomp-dev libnccl2 libnccl-dev autoconf automake autogen build-essential libasound2-dev libflac-dev libogg-dev libtool libvorbis-dev pkg-config python cpio libfftw3-dev zlib1g-dev libbz2-dev liblzma-dev libboost-all-dev libgflags-dev libgoogle-glog-dev sox libcublas-dev
+sudo apt-get install -y build-essential ca-certificates cmake wget git vim emacs nano htop g++ openssh-server openssh-client libopenmpi-dev libomp-dev libnccl2 libnccl-dev autoconf automake autogen build-essential libasound2-dev libflac-dev libogg-dev libopus-dev libopus-dev libtool libvorbis-dev pkg-config python cpio libfftw3-dev zlib1g-dev libbz2-dev liblzma-dev libboost-all-dev libgflags-dev libgoogle-glog-dev sox libcublas-dev libsox-fmt-mp3
 
 cd /tmp
 wget https://github.com/Kitware/CMake/releases/download/v3.14.0/cmake-3.14.0-Linux-x86_64.sh -O cmake.sh
@@ -65,7 +65,7 @@ cd libsndfile
 git checkout 5056a77fdae85f96eee4dff82af462db5a5c341e
 ./autogen.sh
 ./configure --enable-werror
-make && make check
+make -j8 && make check
 sudo make install
 
 # ==================================================================
