@@ -20,7 +20,7 @@ fetch common_voice https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139
 
 fetch tedlium http://www.openslr.org/resources/51/TEDLIUM_release-3.tgz
 
-fetch librespeech \
+fetch librispeech \
     http://www.openslr.org/resources/12/dev-clean.tar.gz \
     http://www.openslr.org/resources/12/dev-other.tar.gz \
     http://www.openslr.org/resources/12/test-clean.tar.gz \
