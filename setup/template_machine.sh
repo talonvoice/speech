@@ -23,6 +23,7 @@ if [[ "$(sha256sum cmake.sh | awk '{print $1}')" != "7f3e227cfd9804ee9931490a83c
     echo "cmake check hash failed"
     exit 1
 fi
+chmod +x cmake.sh
 sudo ./cmake.sh --prefix=/usr/local/ --skip-license
 
 # ==================================================================
