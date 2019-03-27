@@ -1,6 +1,6 @@
 #!/bin/bash -ue
 
-sudo apt-get -y install vim screen tmux aria2
+sudo apt-get -y install vim screen tmux aria2 gnupg-curl
 
 ## START wav2letter++
 
