@@ -44,6 +44,8 @@ def tokenize(phrase):
             out.append('|')
     all_tokens.update(out)
     return ' '.join(out)
+# for parity with librispeech dataset
+all_tokens.add("'")
 
 all_sentences = set()
 all_words = set()
