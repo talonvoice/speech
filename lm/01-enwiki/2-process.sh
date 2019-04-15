@@ -28,3 +28,6 @@ if [[ ! -e "vocab" ]]; then
 fi
 
 wikicat "enwiki" | wikifilter | ~/build/kenlm/build/bin/lmplz -S 4G  -o 4 --prune 0 0 1 > enwiki.arpa
+
+~/build/kenlm/build/bin/build_binary enwiki.arpa enwiki.bin
+xz enwiki.bin
