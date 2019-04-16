@@ -20,6 +20,8 @@ fetch common_voice https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139
 
 fetch tedlium http://www.openslr.org/resources/51/TEDLIUM_release-3.tgz
 
+fetch tatoeba https://downloads.tatoeba.org/audio/tatoeba_audio_eng.zip
+
 fetch librispeech \
     http://www.openslr.org/resources/12/dev-clean.tar.gz \
     http://www.openslr.org/resources/12/dev-other.tar.gz \
@@ -39,4 +41,5 @@ fetch librispeech \
 
 fetch misc \
     http://www.openslr.org/resources/28/rirs_noises.zip \
-    http://www.openslr.org/resources/45/ST-AEDS-20180100_1-OS.tgz
+    http://www.openslr.org/resources/45/ST-AEDS-20180100_1-OS.tgz \
+    http://goofy.zamia.org/zamia-speech/corpora/noise.tar.xz
