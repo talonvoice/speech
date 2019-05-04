@@ -45,7 +45,7 @@ process_talk() {
         local sentence=$(cut -d' ' -f 7- <<<$line | clean_sentence)
         local s_length=$(echo "$s_end - $s_start" | bc)
         local duration=$(echo "$s_length * 1000" | bc)
-        local clip="$datadir/clips/${name}-${i}.sph"
+        local clip="$datadir/clips/${name}-${i}.flac"
         if [[ ! -e "$clip" ]]; then
             sox "$dataset/sph/$name.sph" "$clip" trim "$s_start" "$s_length"
         fi

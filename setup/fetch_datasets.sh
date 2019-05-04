@@ -43,3 +43,6 @@ fetch misc \
     http://www.openslr.org/resources/28/rirs_noises.zip \
     http://www.openslr.org/resources/45/ST-AEDS-20180100_1-OS.tgz \
     http://goofy.zamia.org/zamia-speech/corpora/noise.tar.xz
+
+fetch swc \
+    https://www2.informatik.uni-hamburg.de/nats/pub/SWC/SWC_English.tar
