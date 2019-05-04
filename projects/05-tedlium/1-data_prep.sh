@@ -46,10 +46,10 @@ process_talk() {
         local s_length=$(echo "$s_end - $s_start" | bc)
         local duration=$(echo "$s_length * 1000" | bc)
         local clip="$datadir/clips/${name}-${i}.flac"
+        [[ -z "$sentence" ]] && continue
         if [[ ! -e "$clip" ]]; then
             sox "$dataset/sph/$name.sph" "$clip" trim "$s_start" "$s_length"
         fi
-        [[ -z "$sentence" ]] && continue
         echo "${name}-${i} $(realpath "$clip") $duration $sentence" >> "$datadir/clips.txt/${name}"
         let i++
     done
