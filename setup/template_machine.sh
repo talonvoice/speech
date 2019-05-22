@@ -53,7 +53,7 @@ sudo make install
 cd /tmp
 git clone --recursive https://github.com/facebookresearch/flashlight.git
 cd flashlight && mkdir -p build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release -DFLASHLIGHT_BACKEND=CUDA
+cmake .. -DCMAKE_BUILD_TYPE=Release -DFLASHLIGHT_BACKEND=CUDA -DFL_BUILD_CONTRIB=ON
 make -j8
 sudo make install
 
