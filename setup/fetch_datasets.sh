@@ -16,7 +16,7 @@ fetch() {
 
 fetch speech_commands http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz
 
-fetch common_voice https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amazonaws.com/cv-corpus-1/en.tar.gz
+fetch common_voice https://voice-prod-bundler-ee1969a6ce8178826482b88e843c335139bd3fb4.s3.amazonaws.com/cv-corpus-2/en.tar.gz
 
 fetch tedlium http://www.openslr.org/resources/51/TEDLIUM_release-3.tgz
 
