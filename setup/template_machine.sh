@@ -3,6 +3,8 @@
 build=$HOME/build
 prefix=$HOME/opt
 
+mkdir -p "$build" "$prefix"
+
 sudo apt-get -y install vim screen tmux aria2
 sudo apt-get -y install gnupg-curl || true
 
