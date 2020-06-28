@@ -11,13 +11,13 @@ sudo apt-get -y install gnupg-curl || true
 ## START wav2letter++
 
 # from https://www.tensorflow.org/install/gpu
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
-sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.1.243-1_amd64.deb
 wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64/nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
 sudo apt install ./nvidia-machine-learning-repo-ubuntu1804_1.0.0-1_amd64.deb
 sudo apt-get -y update
-sudo apt-get -y install --no-install-recommends cuda-10-0 libcudnn7=7.4.1.5-1+cuda10.0 libcudnn7-dev=7.4.1.5-1+cuda10.0
+sudo apt-get -y install --no-install-recommends cuda-10-1 libcudnn7=7.6.5.32-1+cuda10.1 libcudnn7-dev=7.6.5.32-1+cuda10.1
 rm {cuda,nvidia}*-repo-*.deb
 
 # from wav2letter++ Dockerfile-CUDA https://github.com/facebookresearch/wav2letter/blob/master/Dockerfile-CUDA
@@ -45,7 +45,7 @@ cd "$build"
 git clone --recursive https://github.com/arrayfire/arrayfire.git || true
 
 cd arrayfire
-git checkout v3.6.2
+git checkout v3.7.1
 mkdir -p build && cd build
 CXXFLAGS=-DOS_LNX cmake .. -DCMAKE_BUILD_TYPE=Release -DAF_BUILD_CPU=OFF -DAF_BUILD_OPENCL=OFF -DAF_BUILD_EXAMPLES=OFF -DCMAKE_INSTALL_PREFIX="$prefix"
 make -j8
